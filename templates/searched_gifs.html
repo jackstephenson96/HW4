@@ -7,6 +7,10 @@
 
 {% block main_content %}
 
+{% if not gifs %}
+There are no saved gifs to show.
+{% endif %}
+
 <ul>
 {% for sg in gifs %}
 <li>
@@ -18,9 +22,6 @@
 {% endfor %}
 </ul>
 
-{% if not gifs %}
-There are no saved gifs to show.
-{% endif %}
 
 <div>
 {% for message in get_flashed_messages() %}
